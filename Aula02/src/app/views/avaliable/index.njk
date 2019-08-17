@@ -1,0 +1,9 @@
+{%for item in avaliable%}
+      <label class="{%if item.avaliable === false%}disabled{%endif%}" for="time-{{item.time}}">
+        {%if item.avaliable === true%}
+        <input type="radio" name="date" value="{{item.value}}" id="time-{{item.time}}"/>
+        {%endif%}
+        {{item.time}}
+      </label>
+
+{%endfor%}

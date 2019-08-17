@@ -1,0 +1,20 @@
+{%extends "_layouts/main.njk"%} {%block body%}
+<div class="content">
+  <strong>Bem vindo {{user.name}}</strong>
+  <p>Sua agenda</p>
+  <ul class="providers">
+    {%for user in users%}
+      <li class="provider">
+        <div>
+          <img src="/files/{{user.avatar}}"/>
+          <strong>{{user.name}}<br>
+          Data:{{user.dataAppoinment}}
+                  Hora:{{user.horaAppoinment}}
+        </strong>
+        </div>
+      </li>
+    {%endfor%}
+  </ul>
+  <a href="/app/logout" class="logout">Logout</a>
+</div>
+{%endblock%}
